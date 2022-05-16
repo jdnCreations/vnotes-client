@@ -5,8 +5,8 @@ export default function NewNote({ user }) {
   const navigate = useNavigate();
 
   const [username, setUsername] = useState();
-  const [agent, setAgent] = useState('Breach');
-  const [map, setMap] = useState('Breeze');
+  const [agent, setAgent] = useState('breach');
+  const [map, setMap] = useState('breeze');
   const [noteText, setNoteText] = useState();
   const [note, setnote] = useState({});
 
@@ -17,7 +17,7 @@ export default function NewNote({ user }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        user: username,
+        user,
         agent,
         map,
         text: noteText,
@@ -28,16 +28,12 @@ export default function NewNote({ user }) {
   }
 
   return (
-    <div className='main flex flex-col items-center justify-center'>
-      <h1 className='font-bold text-5xl text-primary mb-16'>CREATE NEW NOTE</h1>
-      <div className='bg-primary w-[50%] py-10 rounded-lg'>
+    <div className='flex flex-col items-center justify-center'>
+      <h1 className='font-bold text-2xl lg:text-5xl text-primary my-14'>
+        CREATE NEW NOTE
+      </h1>
+      <div className='bg-primary w-[95%] py-10 rounded-lg'>
         <div className='flex flex-col items-center w-[100%]'>
-          <input
-            className='w-[80%] rounded-lg text-2xl py-4 px-8 mb-4'
-            type='text'
-            placeholder='username'
-            onChange={(e) => setUsername(e.target.value)}
-          />
           <select
             className='w-[80%] rounded-lg text-2xl py-4 px-8 mb-4'
             type='text'
@@ -59,17 +55,23 @@ export default function NewNote({ user }) {
             onChange={(e) => setAgent(e.target.value)}
           >
             <option value='breach'>Breach</option>
+            <option value='brimstone'>Brimstone</option>
+            <option value='phoenix'>Phoenix</option>
+            <option value='sage'>Sage</option>
+            <option value='sova'>Sova</option>
+            <option value='viper'>Viper</option>
+            <option value='cypher'>Cypher</option>
+            <option value='reyna'>Reyna</option>
+            <option value='killjoy'>Killjoy</option>
+            <option value='omen'>Omen</option>
+            <option value='jett'>Jett</option>
+            <option value='raze'>Raze</option>
+            <option value='skye'>Skye</option>
+            <option value='yoru'>Yoru</option>
+            <option value='astra'>Astra</option>
             <option value='kayo'>Kay/o</option>
             <option value='chamber'>Chamber</option>
-            <option value='raze'>Raze</option>
-            <option value='sova'>Sova</option>
-            <option value='jett'>Jett</option>
-            <option value='yoru'>Yoru</option>
-            <option value='killjoy'>Killjoy</option>
-            <option value='reyna'>Reyna</option>
-            <option value='omen'>Omen</option>
             <option value='neon'>Neon</option>
-            <option value='viper'>Viper</option>
           </select>
           <textarea
             className='w-[80%] note rounded-lg text-2xl py-4 px-8 mb-4'

@@ -33,7 +33,10 @@ export default function DeleteNote({ user }) {
           >
             Yes, Delete
           </button>
-          <button className='bg-white text-black font-medium text-xl px-14 py-3 rounded-lg'>
+          <button
+            onClick={() => navigate('/notes')}
+            className='bg-white text-black font-medium text-xl px-14 py-3 rounded-lg'
+          >
             No, go back
           </button>
         </div>

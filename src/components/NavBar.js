@@ -8,9 +8,9 @@ export default function NavBar({ user, handleLogout }) {
         VALLY<span className='text-secondary'>NOTES</span>
       </Link>
       <ul className='flex w-[112px] justify-around'>
-        <Link className='hover:text-secondary' to='/profile'>
+        {/* <Link className='hover:text-secondary' to='/profile'>
           profile
-        </Link>
+        </Link> */}
         <Link className='hover:text-secondary' onClick={handleLogout} to='/'>
           logout
         </Link>

@@ -6,6 +6,7 @@ module.exports = {
         primary: '#111111',
         secondary: '#FF4655',
         accent: '#EBEBEB',
+        create: '#CC3743',
       },
     },
   },
